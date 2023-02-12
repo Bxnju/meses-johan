@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+:root{
+
+	--quick: 'Quicksand', sans-serif;
+	--script: 'Dancing Script', cursive;
+	--purple: #5400D2;
+	--dark-purple: #3D0098;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+html{
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar:vertical {
+    width: 10px;
+    background: #fff;
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	max-width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em 1em 4em;
+	background: rgba(255, 255, 255, 0.04);
+	backdrop-filter: blur(5px);
+	color: #fff;
+}
+
+header h2{
+	font-family: var(--script);
+	font-size: 3em;
+}
+
+header nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header nav a{
+	text-decoration: none;
+	margin-right: 3em;
+	font-size: 1.2em;
+	font-family: var(--quick);
+	color: #fff;
+}
+
+header nav a:last-child{
+	margin: none;
+}
+
+body{
+	background: linear-gradient(150deg, rgba(255, 0, 0, 0.5), var(--purple), var(--dark-purple));
+	background-size: 400% 300%;
+	height: 80vh;
+	animation: bgGradient 15s ease infinite;
+}
+
+#inicio{
+	max-width: 100%;
+	padding: 5em 10em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#inicio img{
+	display: inline;
+	width: 24em;
+	transition: 0.6s;
+}
+
+#inicio img:hover{	
+	box-shadow: 15px 15px 0 var(--dark-purple);
+	width: 25em;
+}
+
+#inicio .texto h2{
+	font-family: var(--script);
+	color: #fff;
+	font-size: 4em;
+}
+
+#inicio .texto p{
+	width: 30em;
+	color: #fff;
+	font-size: 1em;
+	font-family: var(--quick);
+	padding-left: 2em;
+}
+
+#poemas{
+	max-width: 100%;
+	min-height: 100vh;
+}
+
+#poemas .titulo, #fotos .titulo{
+	text-align: center;
+	padding: 2em 0;
+	width: 100%;
+}
+
+#poemas .titulo h2, #fotos .titulo h2{
+	font-size: 4em;
+	color: #fff;
+	font-family: var(--script);
+}
+
+#poemas .titulo p, #fotos .titulo p{
+	color: #fff;
+	font-family: var(--quick);
+}
+
+#poemas .cards{
+	display: flex;
+	padding: 2em 15em;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 15em;
+	padding: 2em;
+	text-align: center;
+	height: 15em;
+	background: rgba(255, 255, 255, 0.05);
+	color: #fff;
+	box-shadow: inset -1px 1px 5px rgba(255, 255, 255, .5);
+	border-radius: 1em;
+	margin-top: 2em;
+}
+
+.card_header{
+	font-family: var(--script);
+	transition: 1.2s;
+	font-size: 1.2em;
+}
+
+.card_body{
+	position: absolute;
+	font-family: var(--quick);
+	opacity: 0;
+	transition: .8s;
+	font-size: .8em;
+	width: 70%;
+}
+
+.card:hover .card_body{
+	opacity: 1;
+}
+
+.card:hover .card_header{
+	opacity: 0.2;
+}
+
+
+.carta{
+	width: 20em;
+	height: 29em;
+}
+
+.carta:hover .card_header{
+	opacity: 1;
+}
+
+.carta .card_body{
+	transition: 1.5s;
+	opacity: 0.6;
+}
+
+.center{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#fotos .fotos{
+	padding: 0 24em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#fotos .fotos a .img{
+	min-width: 10em;
+	min-height: 12em;
+	background-size: cover;
+	background-position: center center;
+	margin-top: 2em;
+	transition: 0.5s;
+}
+
+.img_01{
+	background: url('../imgs/foto_01.jpg');
+}
+
+.img_02{
+	background: url('../imgs/foto_02.jpg');
+}
+
+.img_03{
+	background: url('../imgs/foto_03.jpg');
+}
+
+.img_04{
+	background: url('../imgs/foto_04.jpg');
+}
+
+.img_05{
+	background: url('../imgs/foto_05.jpg');
+}
+
+.img_06{
+	background: url('../imgs/foto_06.jpg');
+}
+
+.img_07{
+	background: url('../imgs/foto_07.jpg');
+}
+
+.img_08{
+	background: url('../imgs/foto_08.jpg');
+}
+
+.img:hover{
+	box-shadow: 3px 3px 0 var(--dark-purple);
+}
+
+
+.animate-left{
+	animation: animate-left 1s linear;
+}
+
+@keyframes bgGradient{
+	0%{background-position: 0% 50%}
+	50%{background-position: 100% 50%}
+	100%{background-position: 0% 50%}
+}
+
+@keyframes animate-left{
+	from{
+		transform: translateX(-20px);
+		opacity: 0;
+	}to{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
